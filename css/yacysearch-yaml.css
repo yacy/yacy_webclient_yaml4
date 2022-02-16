@@ -23,7 +23,7 @@
 @import url(../yaml/add-ons/accessible-tabs/tabs.css);
 @import url(../yaml/add-ons/microformats/microformats.css);
 
-@import url(screen.css);
+/*@import url(screen.css);*/
 
 /* import print layout | Druck-Layout einbinden */
 @import url(../yaml/print/print.css);

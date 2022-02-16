@@ -9,13 +9,12 @@
  * If you enhance this code, please clone the repository and give us a pull request!
  */
 
-var server="localhost:8090";
-//var server="141.52.175.63";
-
+var search_api = "https://searchlab.eu/en/api/yacysearch.json?callback=?";
+//var suggest_api='https://searchlab.eu/en/api/suggest.json?callback=?';
 
 var SearchModel = Backbone.Model.extend({
-    urlRoot:'http://' + server + '/yacysearch.json?callback=?',
-    //urlRoot:'http://' + server + '/solr/select?wt=yjson&facet=true&facet.mincount=1&facet.field=url_file_ext_s&facet.field=host_s&callback=?',
+    urlRoot:search_api,
+    //urlRoot:'http://localhost:8090/solr/select?wt=yjson&facet=true&facet.mincount=1&facet.field=url_file_ext_s&facet.field=host_s&callback=?',
     defaults:{hl:'false',query:'',start:'0',rows:'100',layout:'paragraph',startTime:new Date(),servlet:"index.html"},
 
     url:function(){
